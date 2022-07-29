@@ -1,15 +1,15 @@
 package com.portfolio.mateofernandez.service;
 
 import com.portfolio.mateofernandez.model.Persona;
-import com.portfolio.mateofernandez.repository.PersonaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.portfolio.mateofernandez.repository.IPersonaRepository;
 
 @Service
 public class PersonaService implements IPersonaService{
     @Autowired
-    private PersonaRepository persoRepository;
+    private IPersonaRepository persoRepository;
 
     @Override
     public List<Persona> getPersonas() {
