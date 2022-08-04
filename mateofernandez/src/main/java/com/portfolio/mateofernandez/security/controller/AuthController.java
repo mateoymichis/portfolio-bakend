@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 public class AuthController {
     @Autowired
     PasswordEncoder passwordEncoder;
@@ -68,8 +68,8 @@ public class AuthController {
         
         return new ResponseEntity(new Mensaje("Usuario guardado"), HttpStatus.CREATED);
     }
-    
-    @PostMapping ("/login")
+   
+        @PostMapping ("/login")
     public ResponseEntity<JwtDto> login (@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult) {
         if(bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("Campos mal puestos"), HttpStatus.BAD_REQUEST);
