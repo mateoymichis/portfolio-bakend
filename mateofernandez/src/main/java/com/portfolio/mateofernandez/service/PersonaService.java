@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.portfolio.mateofernandez.repository.IPersonaRepository;
+import java.util.Optional;
 
 @Service
 public class PersonaService implements IPersonaService{
@@ -31,6 +32,16 @@ public class PersonaService implements IPersonaService{
     public Persona findPersona(Long id) {
         Persona perso = persoRepository.findById(id).orElse(null);
         return perso;
+    }
+        
+    @Override
+    public Optional<Persona> getOne(Long id) {
+        return persoRepository.findById(id);
+    }
+    
+    @Override
+    public boolean existsById(Long id) {
+        return persoRepository.existsById(id);
     }
     
 }
