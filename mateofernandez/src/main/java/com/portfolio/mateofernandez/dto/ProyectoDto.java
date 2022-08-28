@@ -14,15 +14,22 @@ public class ProyectoDto {
     private String descripcion;
     @NotBlank
     private String img;
+    @NotBlank
+    private String link1;
+    @NotBlank
+    private String link2;
 
     public ProyectoDto() {
     }
 
-    public ProyectoDto(String nombre, String descripcion, String img) {
+    public ProyectoDto(String nombre, String descripcion, String img, String link1, String link2) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.img = img;
+        this.link1 = link1;
+        this.link2 = link2;
     }
-    
+
+       
     
 }
