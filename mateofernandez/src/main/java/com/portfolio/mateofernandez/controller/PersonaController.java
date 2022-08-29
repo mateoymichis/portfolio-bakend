@@ -66,5 +66,4 @@ public class PersonaController {
         Persona persona = interPersona.getOne(id).get();
         return new ResponseEntity(persona, HttpStatus.OK);
     }
-    
 }
