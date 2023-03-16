@@ -14,7 +14,7 @@
     <name>mateofernandez</name>
     <description>Portfolio de Mateo Fernandez</description>
     <properties>
-        <java.version>18</java.version>
+        <java.version>1.8</java.version>
     </properties>
     <dependencies>
         <dependency>
